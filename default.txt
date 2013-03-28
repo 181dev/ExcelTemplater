@@ -1,0 +1,16 @@
+/**
+ * サンプル（Setter, Getterの生成）
+ */
+
+#foreach($row in $table)
+	private ${row.className} ${row.field}; //${row.name}
+#end
+
+#foreach($row in $table)
+	/* ${row.name}のSetter,Getter */
+	public ${row.className} get${row.Field}(){ return ${row.field}; }
+	public void set${row.Field}(${row.className} value){ ${row.field} = value; }
+
+#end
+
+
